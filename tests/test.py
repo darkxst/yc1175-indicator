@@ -1,8 +1,9 @@
 #!/usr/bin/python
-from const import BUTTON, BUTTON_TRIGGER
 import asyncio
-import indicator
 import logging
+
+from yc1175_indicator import indicator
+from yc1175_indicator.const import BUTTON, BUTTON_TRIGGER
 
 debug = True
 if debug:

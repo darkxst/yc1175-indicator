@@ -1,9 +1,10 @@
 import asyncio
-from const import (
+from .const import (
     CRC16,
     CMD_TYPE,
     COMMAND,
     EFFECT_LIST,
+    ERROR,
     SOF,
     ZERO)
 import logging

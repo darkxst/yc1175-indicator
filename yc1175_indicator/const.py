@@ -2,6 +2,8 @@ import crcmod
 from typing import Dict
 
 CRC16 = crcmod.mkCrcFun(0x11021, initCrc=0)
+SOF = b'\xFE'
+ZERO = b'\x00'
 
 BUTTON: Dict[str, str] = {
     'POWER': b'\x00',
@@ -53,6 +55,3 @@ ERROR: Dict[str, str] = {
 	'CONTENT': b'\x05',
 	'TIMEOUT': b'\x06',
 }
-
-SOF = b'\xFE'
-ZERO = b'\x00'

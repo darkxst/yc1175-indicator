@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import argparse
 import asyncio
-from const import EFFECT_LIST
+from .const import EFFECT_LIST
 import serial_asyncio
-from indicator import Frame, ycProtocol
+from .indicator import Frame, ycProtocol
 import logging
 
 _LOGGER = logging.getLogger(__name__)
@@ -52,6 +52,7 @@ def print_list():
     for i in range(8):
         print(f"{i} - {EFFECT_LIST[i]}")
     print("---")
+
 async def run():
     args = parse_args()
     rgb = tuple(args.rgb)
@@ -75,6 +76,9 @@ async def run():
         pass
     except Exception as e:
         _LOGGER.error(f"An error occurred: {e}")
-    
-if __name__ == '__main__':
+
+def main():
     asyncio.run(run())
+
+if __name__ == '__main__':
+    main()

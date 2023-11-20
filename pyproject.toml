@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "yc1175-indicator"
+version = "0.1.0"
+repository = "https://github.com/darkxst/yc1175-indicator"
+license = "MIT"
+description = "A library to control the yc1175 indicator in Sonoff iHost"
+authors = ["Tim Lunn <tim@feathertop.org>"]
+readme = "README.md"
+keywords = ["yc11752", "ihost", "indicator"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+crcmod = "^1.7"
+pyserial-asyncio = "^0.6"
+
+[tool.poetry.scripts]
+indicator-cli = "yc1175_indicator.indicator_cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
