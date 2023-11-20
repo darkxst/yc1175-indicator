@@ -4,11 +4,17 @@ from typing import Dict
 CRC16 = crcmod.mkCrcFun(0x11021, initCrc=0)
 
 BUTTON: Dict[str, str] = {
-    'POWER': b'\x01',
-    'PAIRING': b'\x02',
-    'SECURITY': b'\x03',
-    'MUSIC': b'\x04',
-    'RESET': b'\x05',
+    'POWER': b'\x00',
+    'PAIRING': b'\x01',
+    'SECURITY': b'\x02',
+    'MUSIC': b'\x03',
+    'RESET': b'\x04',
+}
+
+BUTTON_TRIGGER: Dict[str, str] = {
+    'SINGLE': b'\x00',
+    'DOUBLE': b'\x01',
+    'LONG': b'\x02',
 }
 
 CMD_TYPE: Dict[str, str] = {
@@ -26,6 +32,17 @@ COMMAND: Dict[str, str] = {
 	'BROADCAST_ID': b'\x06',
 	'QUERY_LED': b'\x07',
 }
+
+EFFECT_LIST: list[str] = [
+    'off',
+    'on',
+    'fast_flashing',
+    'double_flashing',
+    'breathing',
+    'marquee',
+    'single_shot_flasher',
+    'test_mode',
+]
 
 ERROR: Dict[str, str] = {
 	'SUCCESS': b'\x00',
