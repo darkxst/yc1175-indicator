@@ -12,11 +12,33 @@ and the main RGB indicator.
 
 
 ## CLI Usage
-For convience you can control the LED's from the CLI Wrapper.  
+For convience you can control the LED's from the CLI wrapper.  
 `indicator-cli <led_index> --effect <effect_num> --rgb <rgb tuple>`
 
-example:  
+Example:  
 `indicator-cli 4 --effect 2 --rgb 0 0 255`
+
+Print LED and effect codes:
+```sh
+$ indicator-cli --list
+LEDs:
+0 - power
+1 - pairing
+2 - security
+3 - music
+4 - indicator
+---
+Effects:
+0 - off
+1 - on
+2 - fast_flashing
+3 - double_flashing
+4 - breathing
+5 - marquee
+6 - single_shot_flasher
+7 - test_mode
+```
+
 
 ## Library Usage
 ```python
