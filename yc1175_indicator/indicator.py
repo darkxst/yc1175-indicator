@@ -1,5 +1,6 @@
 import asyncio
 from .const import (
+    BUTTON,
     CRC16,
     CMD_TYPE,
     COMMAND,
@@ -178,8 +179,13 @@ class HassAPI:
         self.comm = ycProtocol()
         await self.comm.serial_init()
 
+    def button_list(self) -> list:
+        """Available buttons list"""
+        buttons = [key.lower() for key in BUTTON.keys()]
+        return buttons
+
     def effect_list(self) -> list:
-        '''Supported effects list'''
+        """Supported effects list"""
         return EFFECT_LIST
 
     def light_on(self, idx:int, effect:int=1, rgb:tuple=(0,0,255)) -> None:
