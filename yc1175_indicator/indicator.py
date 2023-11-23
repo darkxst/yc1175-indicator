@@ -30,7 +30,7 @@ class Frame:
                 self.seq = seq
             else:
                 self.seq = self.g_seq
-                self.g_seq = (self.g_seq + 1) % 255
+                Frame.g_seq = (Frame.g_seq + 1) % 255
  
     def build(self, mtype:bytes(1), cmd:bytes(1), data:bytearray=b'') -> None:
         self.mtype = mtype
