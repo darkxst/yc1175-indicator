@@ -12,11 +12,21 @@ and the main RGB indicator.
 
 
 ## CLI Usage
-For convience you can control the LED's from the CLI Wrapper.  
-`indicator-cli <led_index> --effect <effect_num> --rgb <rgb tuple>`
+For convience you can control the LED's from the CLI wrapper.  
+```sh
+$ indicator-cli <led_index> --effect <effect_num> --rgb <rgb tuple>
+```
 
-example:  
-`indicator-cli 4 --effect 2 --rgb 0 0 255`
+Example:  
+```sh
+$ indicator-cli 4 --effect 2 --rgb 0 0 255
+```
+
+Print LED and effect codes:
+```sh
+$ indicator-cli --list
+```
+
 
 ## Library Usage
 ```python
@@ -43,3 +53,9 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 ```
+
+## Support
+
+If you would like to help support further development of my `HAOS for iHost` project consider buying me a coffee!
+
+<a href="https://www.buymeacoffee.com/darkxst" target="_blank"><img src="img/blue-button.png" alt="Buy Me A Coffee" height="41" width="174"></a>

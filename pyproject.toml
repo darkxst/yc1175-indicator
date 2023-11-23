@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "yc1175-indicator"
-version = "0.1.0"
+version = "0.1.1"
 repository = "https://github.com/darkxst/yc1175-indicator"
 license = "MIT"
 description = "A library to control the yc1175 indicator in Sonoff iHost"

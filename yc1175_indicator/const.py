@@ -55,3 +55,11 @@ ERROR: Dict[str, str] = {
 	'CONTENT': b'\x05',
 	'TIMEOUT': b'\x06',
 }
+
+LED_LIST: list[str] = [
+    'power',
+    'pairing',
+    'security',
+    'music',
+    'indicator',
+]
